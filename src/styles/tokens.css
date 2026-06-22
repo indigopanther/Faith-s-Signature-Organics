@@ -1,0 +1,79 @@
+/* =============================================================================
+   Faith's Signature Organics — Design Tokens
+   Derived from the Claude Design handoff. Purple + green herbal apothecary.
+   ============================================================================= */
+:root {
+  /* --- Brand: green (primary) --- */
+  --green: #2c7a39;
+  --green-600: #236029;
+  --green-700: #1c4a2c;
+  --green-bright: #46a149;
+
+  /* --- Brand: purple (secondary / accent) --- */
+  --purple: #6d2c91;
+  --purple-600: #58206f;
+  --plum: #4a2545;
+
+  /* --- Surfaces --- */
+  --bg: #ffffff;
+  --bg-lavender: #f4eef9;
+  --bg-lavender-soft: #f7f3fb;
+  --bg-lavender-tint: #ece2f6;
+  --bg-field: #faf7fd;
+  --cream: #f5eefb;
+
+  /* --- Ink / text --- */
+  --ink: #2a1f33;
+  --text: #574f60;
+  --text-muted: #6f6878;
+  --text-faint: #948c9f;
+  --on-dark: #f5eefb;
+  --on-dark-soft: rgba(245, 238, 251, 0.7);
+  --lilac: #b98fd0;
+
+  /* --- Borders --- */
+  --border: #e8dff2;
+  --border-card: #ebe2f4;
+  --border-strong: #d4c6e6;
+  --border-field: #d8cbec;
+
+  /* --- Footer --- */
+  --footer-bg: #2a1f33;
+  --footer-text: #d6cce2;
+  --footer-muted: #a99fb8;
+  --footer-line: #3d3349;
+
+  /* --- Typography --- */
+  --font-display: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* --- Spacing (8pt grid) --- */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-xxl: 96px;
+
+  /* --- Radius --- */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+
+  /* --- Shadows --- */
+  --shadow-card: 0 24px 40px -24px rgba(47, 74, 58, 0.4);
+  --shadow-img: 0 30px 60px -25px rgba(74, 37, 69, 0.55);
+  --shadow-soft: 0 24px 48px -32px rgba(47, 74, 58, 0.35);
+
+  /* --- Layout --- */
+  --maxw: 1240px;
+  --nav-h: 116px;
+
+  /* --- Category gradient blocks (used for placeholder product tiles) --- */
+  --grad-elderberry: linear-gradient(150deg, #4a2545, #311a2e);
+  --grad-seamoss: linear-gradient(150deg, #46a149, #236b2c);
+  --grad-tea: linear-gradient(150deg, #6ba83f, #3a7a26);
+  --grad-tinctures: linear-gradient(150deg, #2f8a52, #1c4a2c);
+  --grad-bundles: linear-gradient(150deg, #4a2545, #2c7a39);
+}
