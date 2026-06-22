@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useToast } from '../context/ToastContext.jsx';
 import { business, footerShop, socials } from '../data/content.js';
+import SocialIcon from './SocialIcon.jsx';
 import logo from '../assets/faiths-logo.png';
 
 export default function Footer() {
@@ -40,7 +41,7 @@ export default function Footer() {
                 aria-label={s.label}
                 title={s.label}
               >
-                {s.short}
+                <SocialIcon name={s.id} />
               </a>
             ))}
           </div>

@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { values } from '../data/content.js';
+import { DECOR } from '../data/images.js';
 import Reveal from '../components/Reveal.jsx';
 
 export default function About() {
@@ -7,7 +8,14 @@ export default function About() {
 
   return (
     <div className="route-fade">
-      <section className="about-hero">
+      <section
+        className="about-hero"
+        style={{
+          backgroundImage: `linear-gradient(150deg, rgba(74,37,69,0.88), rgba(44,122,57,0.86)), url(${DECOR.aboutHero})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="hatch" />
         <div className="about-hero-inner">
           <span className="eyebrow on-dark">Our story</span>
@@ -33,8 +41,12 @@ export default function About() {
 
       <section className="split">
         <Reveal className="feature-visual tall">
-          <div className="hatch" />
-          <span className="visual-caption">[ founder portrait ]</span>
+          <img
+            className="feature-img"
+            src={DECOR.portrait}
+            alt="Faith, founder of Faith's Signature Organics"
+            loading="lazy"
+          />
         </Reveal>
         <Reveal delay={120}>
           <h2 className="h-section" style={{ fontSize: 'clamp(26px,3.4vw,40px)', lineHeight: 1.08 }}>

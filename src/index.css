@@ -361,7 +361,7 @@ h3 {
   align-items: center;
 }
 .nav-logo img {
-  height: 58px;
+  height: 76px;
   width: auto;
 }
 .nav-links {
@@ -521,9 +521,14 @@ h3 {
   margin-top: 32px;
 }
 
-.hero-visual {
+/* Figure wraps the image (clipped) + chips (NOT clipped, so they can overhang) */
+.hero-figure {
   position: relative;
   aspect-ratio: 4 / 5;
+}
+.hero-visual {
+  position: absolute;
+  inset: 0;
   border-radius: var(--radius-sm);
   overflow: hidden;
   background: linear-gradient(150deg, var(--plum), var(--green));
@@ -531,6 +536,29 @@ h3 {
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow-img);
+}
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-visual-tint {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(42, 31, 51, 0) 40%, rgba(42, 31, 51, 0.42));
+}
+/* Real photo for the split feature blocks */
+.feature-visual {
+  overflow: hidden;
+}
+.feature-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .hatch {
   position: absolute;
@@ -593,12 +621,12 @@ h3 {
   background: var(--purple);
 }
 .hero-chip.c1 {
-  top: 8%;
-  right: 10%;
+  top: 26px;
+  right: -12px;
 }
 .hero-chip.c2 {
-  bottom: 12%;
-  left: -6%;
+  bottom: 30px;
+  left: -12px;
 }
 
 /* =============================================================================
@@ -1290,7 +1318,7 @@ h3 {
   border-radius: var(--radius-md);
 }
 .footer-logo img {
-  height: 46px;
+  height: 56px;
   width: auto;
 }
 .footer p {
@@ -1634,6 +1662,6 @@ h3 {
     grid-template-columns: 1fr 1fr;
   }
   .nav-logo img {
-    height: 46px;
+    height: 60px;
   }
 }

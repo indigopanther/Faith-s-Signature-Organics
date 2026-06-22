@@ -71,7 +71,7 @@ export const footerShop = [
 ];
 
 export const socials = [
-  { label: 'Instagram', short: 'IG', href: 'https://instagram.com' },
-  { label: 'Facebook', short: 'f', href: 'https://facebook.com' },
-  { label: 'TikTok', short: 'TT', href: 'https://tiktok.com' },
+  { id: 'instagram', label: 'Instagram', href: 'https://instagram.com' },
+  { id: 'facebook', label: 'Facebook', href: 'https://facebook.com' },
+  { id: 'tiktok', label: 'TikTok', href: 'https://tiktok.com' },
 ];

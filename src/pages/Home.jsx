@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useCatalog } from '../context/CatalogContext.jsx';
-import { blockForCategory, FEATURED_IDS } from '../data/products.js';
+import { FEATURED_IDS } from '../data/products.js';
+import { DECOR, imageForCategory } from '../data/images.js';
 import { heroChips, trustItems } from '../data/content.js';
 import { pluralize } from '../lib/format.js';
 import Reveal from '../components/Reveal.jsx';
@@ -46,10 +47,16 @@ export default function Home() {
         </Reveal>
 
         <Reveal delay={120}>
-          <div className="hero-visual">
-            <div className="hatch" />
-            <div className="hero-orb floaty" style={{ animation: 'floaty 6s ease-in-out infinite' }}>
-              <div className="hero-orb-inner" />
+          <div className="hero-figure">
+            <div className="hero-visual">
+              <img
+                className="hero-img"
+                src={DECOR.hero}
+                alt="Handmade elderberry syrup in glass jars"
+                fetchPriority="high"
+              />
+              <div className="hatch" />
+              <div className="hero-visual-tint" />
             </div>
             {heroChips.map((c) => (
               <span key={c.label} className={`hero-chip ${c.cls}`}>
@@ -57,7 +64,6 @@ export default function Home() {
                 {c.label}
               </span>
             ))}
-            <span className="visual-caption">[ hero · elderberry pour ]</span>
           </div>
         </Reveal>
       </section>
@@ -106,8 +112,12 @@ export default function Home() {
       <section className="band-lavender">
         <div className="split">
           <Reveal className="feature-visual">
-            <div className="hatch" />
-            <span className="visual-caption">[ founder · in the kitchen ]</span>
+            <img
+              className="feature-img"
+              src={DECOR.promise}
+              alt="Shelves of handmade Faith's Organics bottles"
+              loading="lazy"
+            />
           </Reveal>
           <Reveal delay={120}>
             <span className="eyebrow">Our promise</span>
@@ -142,10 +152,13 @@ export default function Home() {
             <button
               key={cat}
               className="cat-tile"
-              style={{ background: blockForCategory(cat) }}
+              style={{
+                backgroundImage: `linear-gradient(180deg, rgba(42,31,51,0.12), rgba(42,31,51,0.78)), url(${imageForCategory(cat, 600)})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
               onClick={() => goShop(cat)}
             >
-              <div className="hatch" />
               <span className="c-label">{cat}</span>
               <span className="c-count">
                 {pluralize(products.filter((p) => p.cat === cat).length, 'product')} →

@@ -7,6 +7,8 @@
 // live products and these become irrelevant.
 // =============================================================================
 
+import { imageForCategory } from './images.js';
+
 // Category order + display + the gradient used for category tiles / placeholders.
 export const CATEGORIES = ['Elderberry', 'Sea Moss', 'Tea', 'Tinctures', 'Bundles'];
 
@@ -187,7 +189,8 @@ export const FALLBACK_PRODUCTS = RAW.map((p) => ({
   price: p.price,
   currency: 'USD',
   block: p.block,
-  image: null,
+  image: imageForCategory(p.cat, 800),
+  imageAlt: p.name,
   placeholder: p.placeholder,
   blurb: p.blurb,
   optionLabel: p.optionLabel,
